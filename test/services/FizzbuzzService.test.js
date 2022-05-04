@@ -28,6 +28,6 @@ describe('Prueba unitaria para ExplorerService', () => {
         const explorer15 = {name: 'Explorer15', score: 15}
         explorer = FizzbuzzService.applyValidationInExplorer(explorer15)
 
-        expect(explorer.trick).toBe('fizzbuzz')
+        expect(explorer.trick).toBe('FIZZBUZZ')
     })
 })
