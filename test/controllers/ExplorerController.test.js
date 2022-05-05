@@ -1,4 +1,5 @@
-const { TestScheduler } = require('jest')
+const { TestScheduler } = require('jest');
+const ExplorerService = require('../../lib/services/ExplorerService');
 const ExplorerController = require('./../../lib/controllers/ExplorerController')
 
 describe("Prueba unitaria de ExplorerController", () =>{
@@ -27,5 +28,11 @@ describe("Prueba unitaria de ExplorerController", () =>{
         const explorersAmmoutInNode = ExplorerController.getExplorersAmonutByMission("node");
 
         expect(explorersAmmoutInNode).toBe(10);
+    })
+
+    test('4) Obtiene strick dependiendo del numero prueba getNumberValidation', () => {
+        const number = ExplorerController.getNumberValidation(5)
+
+        expect(number).toBe('BUZZ')
     })
 })
